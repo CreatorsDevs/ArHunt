@@ -35,8 +35,9 @@
 			if (_isInitialized)
 			{
 				var map = LocationProviderFactory.Instance.mapManager;
-				transform.localPosition = map.GeoToWorldPosition(LocationProvider.CurrentLocation.LatitudeLongitude);
-			}
+                transform.localPosition = map.GeoToWorldPosition(LocationProvider.CurrentLocation.LatitudeLongitude);
+                //transform.localPosition = map.GeoToWorldPosition(new Utils.Vector2d(28.628769143352425f, 77.2821001608857f));
+            }
 		}
 	}
 }

@@ -498,6 +498,7 @@ GameObject:
   - component: {fileID: 555018383}
   - component: {fileID: 555018386}
   - component: {fileID: 555018388}
+  - component: {fileID: 555018389}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -545,7 +546,7 @@ MonoBehaviour:
       unityTileSize: 100
     loadingTexture: {fileID: 2800000, guid: 30e7307438b5b411ea17484304ecabf5, type: 3}
     tileMaterial: {fileID: 2100000, guid: b9f23e9bce724fa4daac57ecded470b8, type: 2}
-  _initializeOnStart: 1
+  _initializeOnStart: 0
   _imagery:
     _layerProperty:
       sourceType: 0
@@ -577,7 +578,7 @@ MonoBehaviour:
         addCollider: 0
       modificationOptions:
         sampleCount: 10
-        useRelativeHeight: 0
+        useRelativeHeight: 1
         earthRadius: 1000
       unityLayerOptions:
         addToLayer: 0
@@ -685,6 +686,19 @@ MonoBehaviour:
   _spawnScale: 10
   _markerPrefab: {fileID: 1839187062704024, guid: 9b5b1b761a8994c07affd0a05396633b,
     type: 3}
+--- !u!114 &555018389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555018382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f0fa82f89d64bb9a6524c72d538179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 555018383}
 --- !u!1001 &1131143120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -698,10 +712,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTarget (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1968202931547812904, guid: 9711c600b5ec8f5469b1237ea0f546c8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2043776574093719201, guid: 9711c600b5ec8f5469b1237ea0f546c8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2043776574093719201, guid: 9711c600b5ec8f5469b1237ea0f546c8,
         type: 3}
       propertyPath: _useDeviceOrientation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8467257558229091118, guid: 9711c600b5ec8f5469b1237ea0f546c8,
         type: 3}
