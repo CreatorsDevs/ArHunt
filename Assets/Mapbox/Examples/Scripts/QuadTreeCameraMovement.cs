@@ -134,6 +134,7 @@
 		void ZoomMapUsingTouchOrMouse(float zoomFactor)
 		{
 			var zoom = Mathf.Max(0.0f, Mathf.Min(_mapManager.Zoom + zoomFactor * _zoomSpeed, 21.0f));
+			zoom = Math.Clamp(zoom, 15, 17);
 			if (Math.Abs(zoom - _mapManager.Zoom) > 0.0f)
 			{
 				_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, zoom);
